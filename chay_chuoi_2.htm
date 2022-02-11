@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body>
+<script type="text/javascript">
+var i=0,t,c1=new String("TRAN PHUONG HUNG");
+function chaychuan()
+{
+	var c2=new String(chuoi.value);
+	if(i>c2.length)
+	{
+		chay.value="";
+		i=0;
+	}
+	chay.value+=c2.charAt(i);
+	i++;
+	t=setTimeout("chaychuan()",tocdo.value);		
+}
+/*function chay()
+{
+	if(c1.length==0)
+	{
+		c1=new String(chuoi.value);
+		chuoi.value="";
+	}
+	chuoi.value+=c1.substring(0,1);
+	c1=new String(c1.substring(1));
+	t=setTimeout("chay()",tocdo.value);
+}*/
+function nut()
+{
+	if(n.value=="Start")
+	{
+		n.value="Stop";
+		chaychuan();
+	}
+	else if(n.value=="Stop")
+	{
+		n.value="Start";
+		clearTimeout(t);
+	}
+}
+</script>
+Toc do: <input type=text name=tocdo><br>
+Chuoi: <input type=text name=chuoi><br>
+<input type=text name=chay><br>
+<input type=button name=n onclick=nut() value=Start>
+</body>
+</html>

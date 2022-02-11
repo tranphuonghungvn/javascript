@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>thuc hanh java</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+function chuoi(n)
+{
+	if((n>=65 && n<=90)||(n>=97 && n<=122))
+		event.returnValue=true;
+	else
+		event.returnValue=false;
+}
+function so(n)
+{
+	if(n>=48 && n<=57)
+		event.returnValue=true;
+	else
+		event.returnValue=false;
+}
+function dacbiet(n)
+{
+	if(n==33 || n==126 || n==35)
+		event.returnValue=true;
+	else
+		event.returnValue=false;
+}
+</script>
+dacbiet<input type=text onkeypress=dacbiet(event.keyCode)>
+chuoi<input type=text onkeypress=chuoi(event.keyCode)>
+so<input type=text onkeypress=so(event.keyCode)>
+</pre>
+</body>
+</html>

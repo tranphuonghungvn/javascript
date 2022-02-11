@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Java</title>
+</head>
+<body>
+<script type="text/javascript">
+function nhapso(n)
+{
+tkq.value+=n;
+}
+function toantu(q)
+{
+a=eval(tkq.value);
+tkq.value="";
+tt=q;
+}
+function xoa()
+{
+tkq.value="";
+}
+function bang()
+{
+switch(tt)
+{
+case 1:
+tkq.value= a + eval(tkq.value) ;
+break;
+case 2:
+tkq.value= a - eval(tkq.value) ;
+break;
+case 3:
+tkq.value= a * eval(tkq.value) ;
+break;
+case 4:
+tkq.value=  a / eval(tkq.value);
+break;
+}
+}
+</script>
+<table border=2>
+<tr>
+<td colspan="4">
+<p align="center">
+<input type=text name=tkq>
+<input type=button onclick=toantu(1) value="+">
+<input type=button onclick=toantu(2) value="-">
+<input type=button onclick=toantu(3) value="x">
+<input type=button onclick=toantu(4) value=":">
+</td>
+</tr>
+<tr>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(1) value="1"></td>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(2) value="2"></td>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(3) value="3"></td>
+<td>
+<p align="center">
+<input type=button onclick=xoa() value="c"></td>
+</tr>
+<tr>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(4) value="4"></td>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(5) value="5"></td>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(6) value="6"></td>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(0) value="0"></td>
+</tr>
+<tr>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(7) value="7"></td>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(8) value="8"></td>
+<td>
+<p align="center">
+<input type=button onclick=nhapso(9) value="9"></td>
+<td>
+<p align="center">
+<input type=button onclick=bang() value="="></td>
+</tr>
+</table>
+</body>
+</html>

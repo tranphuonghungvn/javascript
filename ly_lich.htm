@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body onload=lylich()>
+<script type="text/javascript">
+function lylich()
+{
+	switch(eval(ten.value))
+	{
+	case 1:
+		msg.value="Ho va ten: Tran Phuong Hung\nSinh ngay: 11/01/1991\nTrinh do: 12/12";
+		break;
+	case 2:
+		msg.value="Ho va ten: Le Quoc Bao\nSinh ngay: 20/11/1990\nTrinh do: 12/12";
+		break;
+	case 3:
+		msg.value="Ho va ten: Nguyen Thi Lan Thanh\nSinh ngay: 20/11/1990\nTrinh do: 12/12";
+		break;
+	}	
+}
+</script>
+<select name=ten onchange=lylich()>
+<option value=1>Hung</option>
+<option value=2>Bao</option>
+<option value=3>Thanh</option>
+</select><br>
+<textarea name=msg rows="3" cols="29"></textarea>
+</body>
+</html>

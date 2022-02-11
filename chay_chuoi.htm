@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body>
+<script type="text/javascript">
+var t;
+function chay()
+{
+	var tb="",s=new String(chuoi.value);
+	tb+=s.substring(1);
+	tb+=s.substring(0,1);
+	chuoi.value=tb;
+	t=setTimeout("chay()",tocdo.value+'000');
+}
+function dung()
+{
+	clearTimeout(t);
+}
+function nut()
+{
+	if(n.value=="Start")
+	{
+		n.value="Stop";
+		chay();
+	}
+	else if(n.value="Stop")
+	{
+		n.value="Start";
+		clearTimeout(t);
+	}
+}
+</script>
+Toc do: <input type=text name=tocdo><br>
+Chuoi: <input type=text name=chuoi><br>
+<input name=n type=button onclick=nut() value=Start>
+</body>
+</html>

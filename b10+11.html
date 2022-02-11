@@ -1,0 +1,19 @@
+﻿<html>
+<head>
+<title>thực hành java</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+var ns,tuoi,d=new Date();
+ns=prompt("Bạn sinh năm bao nhiêu ?","");
+while (ns > eval(d.getYear()))
+{
+	ns=prompt("nhập sai năm sinh yêu cầu nhập lại","");
+}
+tuoi=eval(d.getYear())-ns;
+document.writeln("năm nay bạn "+tuoi+" tuổi");
+</script>
+</pre>
+</body>
+</html>

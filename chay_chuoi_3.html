@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body onload=chay()>
+<script type="text/javascript">
+i=0,ti=0,mau='red',msg='Truong Dai Hoc Ky Thuat Cong Nghe Tp.HCM';
+function chay()
+{
+	chuoi.innerHTML='<p><font size='+i+' color='+mau+'>'+msg+'</font></p>';
+	if(i>6) ti=1;
+	if(i<1) ti=0;
+	if(ti==0)
+	{
+		mau='blue';
+		i++;
+	}
+	else 
+	{
+		mau='red';
+		i--;
+	}
+	setTimeout('chay()',tocdo.value);
+}
+</script>
+<input type=text name=tocdo>
+<div id=chuoi></div>
+</body>
+</html>

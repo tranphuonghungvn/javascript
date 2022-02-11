@@ -1,0 +1,24 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>quay</title>
+</head>
+
+<body onload=quay()>
+<script type='text/javascript'>
+a=new Array('-','\\','|','/');
+i=0;
+function quay()
+{
+	var t;
+	id1.innerHTML='<font size=7>'+a[i]+'</font>';
+	i++;
+	if(i==3)i=0
+	t=setTimeout("quay()",100);
+}
+</script>
+<div id=id1></div>
+</body>
+
+</html>

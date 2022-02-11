@@ -1,0 +1,22 @@
+<html>
+ <head>
+ <title>iFrame</title>
+ </head>
+ <body>
+ <script type="text/javascript">
+ function handleResponse(choice) {
+ var pick = frames("MyFrame");
+ pick.document.writeln(choice);
+ }
+ </script>
+ <iframe id="MyFrame"
+ name="MyFrame"
+ style="width:400px; height:400px; border: 0px"
+ src="http://www.google.com"></iframe>
+ 
+<p>
+ <a href="" onclick="parent.MyFrame.location.replace('http://yahoo.com');return false">choice 1</a><br />
+ <a href="" onclick="parent.MyFrame.location.replace('http://zing.vn'); return false">choice 2</a><br />
+ </p>
+ </body>
+ </html>

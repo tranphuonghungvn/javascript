@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>thuc hanh java</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+function chon(n)
+{
+	switch(eval(n))
+	{
+		case 1:
+			window.open('trang1.html');
+			break;
+		case 2:
+			window.location='trang2.html';
+			break;
+		case 3:
+			w=window.open('trang3.html','','width=200,height=200');
+			break;
+		case 4:
+			w.close();
+			break;
+	}
+}
+function mau(n)
+{
+	switch(eval(n))
+	{
+		case 1:
+			n1.style.backgroundColor='black'
+			n1.style.color='white'
+			break;
+		case 2:
+			n2.style.backgroundColor='black'
+			n2.style.color='white'
+			break;
+		case 3:
+			n3.style.backgroundColor='black'
+			n3.style.color='white'
+			break;
+	}
+}
+function chuan(n)
+{
+	switch(eval(n))
+	{
+		case 1:
+			n1.style.backgroundColor='F0F0F0'
+			n1.style.color='black'
+			break;
+		case 2:
+			n2.style.backgroundColor='F0F0F0'
+			n2.style.color='black'
+			break;
+		case 3:
+			n3.style.backgroundColor='F0F0F0'
+			n3.style.color='black'
+			break;
+	}
+}
+</script>
+<input type=button value='Trang 1' onclick=chon(1) onmousemove=mau(1) name=n1 onmouseout=chuan(1)>
+<input type=button value='Trang 2' onclick=chon(2) onmousemove=mau(2) name=n2 onmouseout=chuan(2)>
+<input type=button value='Cua so' onclick=chon(3) onmousemove=mau(3) name=n3 onmouseout=chuan(3)>
+</pre>
+</body>
+</html>

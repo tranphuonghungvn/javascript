@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>thuc hanh java</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+function chuoi()
+{
+var s=new String(msg.value),tb="",kt="",ks="";
+for(i=0;i<s.length;i++)
+{
+	if(s.charCodeAt(i)>=48 && s.charCodeAt(i)<=57)
+		ks+=s.charAt(i);
+	else
+		kt+=s.charAt(i);
+}
+if(ks=="")
+	tb+="khong co ky so\n";
+else
+	tb+="Ky so la:  "+ks+"\n";
+if(kt=="")
+	tb+="khong co ky tu\n";
+else
+	tb+="Ky tu la:  "+kt+"\n";
+if(tb!="")
+	alert(tb);
+}
+</script>
+<input type=text name=msg><input type=button value=ok onclick=chuoi()>
+</pre>
+</body>
+</html>

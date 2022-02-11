@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>thuc hanh java</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+function chuoi()
+{
+var a=new Array(" ","/",":","*","?","<",">","|","!","#","$","%","^","&","(",")","-","+","`","~","{","}",",","[","]","'","\\","\"");
+var s=new String(msg.value),tb="",kt1=0,kt2=0,kt3=0;
+for(i=0;i<s.length;i++)
+{
+	if(s.charAt(i)=="@")
+		kt1=kt1+1;
+	for(j in a)
+	{
+		if(s.charAt(i)==a[j])
+			kt2=kt2+1;
+	}
+}
+if(s.indexOf("@")<0)
+	tb+="khong co @\n";
+if(s.indexOf(".")<0)
+	tb+="khong co .\n";
+if(s.indexOf("@")==0 || s.charAt(s.length-1)=="@")
+	tb+="@ nam sai vi tri\n";
+if(s.indexOf(".")==0 || s.charAt(s.length-1)=="." || s.indexOf(".@")!=-1 || s.indexOf("@.")!=-1)
+	tb+=". nam sai vi tri\n";
+if(s.indexOf("..")!=-1)
+	tb+="co nhieu .\n";
+if(kt1>1)
+	tb+="co nhieu @\n";
+if(kt2>0)
+	tb+="co ky tu dac biet\n";
+if(tb=="")
+	alert("ok");
+else
+	alert(tb);
+}
+</script>
+<input type=text name=msg><input type=button value=ok onclick=chuoi()>
+</pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>thuc hanh java</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+function chuoi()
+{
+var a=new Array(" ","/",":","*","?","<",">","|","!","#","$","%","^","&","(",")","-","+","`","~","{","}",",","[","]","'",String.fromCharCode(92),String.fromCharCode(34));
+var s=new String(msg.value),tb="",kt1="";
+for(i=0;i<s.length;i++)
+{	
+	for(j in a)
+	{
+		if(s.charAt(i)==a[j])
+			kt1+=s.charAt(i);
+	}
+}
+if (s.length==0)
+	tb="Ban chua nhap chuoi";
+else
+{
+	if(kt1=="")
+		tb="Chuoi hop le";
+	else
+		tb="Ban da vi pham: "+kt1;
+}
+alert(tb);
+}
+</script>
+<input type=text name=msg><input type=button value=ok onclick=chuoi()>
+</pre>
+</body>
+</html>

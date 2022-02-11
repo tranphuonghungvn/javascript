@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body>
+<script type="text/javascript">
+function chay()
+{
+	if(event.button==1)
+	{
+		hinh.style.pixelTop=event.clientY-50;
+		hinh.style.pixelLeft=event.clientX-50;
+		event.returnValue=false;
+		if(event.clientY>=350 && event.clientY<=370 && event.clientX>=350 && event.clientX<=370)
+		{
+			alert('banh da vao luoi');
+		}
+	}
+}
+</script>
+<img src=icon.ico name=hinh style="position:absolute;top=10;left=10;cursor:hand;z-index:3" width=100 height=100 onmousemove=chay()>
+<div id=luoi style='position:absolute;left=300;top=300'>
+<table border=2>
+<tr>
+<td width=120 height=120 style='boder_style:solid'></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

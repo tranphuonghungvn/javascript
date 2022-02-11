@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Java</title>
+</head>
+<body>
+<script type="text/javascript">
+function cong()
+{
+tkq.value=eval(ta.value)+eval(tb.value);
+}
+function tru()
+{
+tkq.value=eval(ta.value)-eval(tb.value);
+}
+function nhan()
+{
+tkq.value=eval(ta.value)*eval(tb.value);
+}
+function chia()
+{
+tkq.value=eval(ta.value)/eval(tb.value);
+}
+function canbac2()
+{
+tkq.value=Math.sqrt(tkq.value);
+}
+</script>
+<input type=text name=ta value=>
+<input type=button name=co onclick=cong() value="+">
+<input type=button name=tr onclick=tru() value="-">
+<input type=button name=nh onclick=nhan() value="x">
+<input type=button name=ch onclick=chia() value=":">
+<input type=button name=cb2 onclick=canbac2() value="cb2">
+<input type=text name=tb value=>
+<input type=text name=tkq value=>
+</body>
+</html>

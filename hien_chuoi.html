@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body>
+<script type="text/javascript">
+function hien()
+{
+	thuchien.style.pixelTop=event.clientX;
+	thuchien.style.pixelLeft=event.clientY;
+	thuchien.style.visibility="visible";
+}
+function an()
+{
+	thuchien.style.visibility="hidden";
+}
+</script>
+<input id=a type=button value="Email" onmousemove=hien() onmouseout=an()>
+<div id=thuchien style="position:absolute; visibility=hidden; background=yellow">
+Dang ky email
+</div>
+</body>
+</html>

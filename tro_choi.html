@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>thuc hanh java</title>
+</head>
+<body onload=trochoi()>
+<pre>
+<script type="text/javascript">
+function rand(n)
+{
+	return Math.round(Math.random()*n);
+}
+function trochoi()
+{
+	var d,c,g,a=new Array('Da Nang','Da Lat','Ho Chi Minh','Ben Tre','Tien Giang','Ha Noi','Hue');
+	s=new String(a[rand(a.length-1)]);
+	d=prompt('Goi y 1: Ky tu dau la '+s.charAt(0),'');
+	if(d==s.toLowerCase())
+		alert('Chinh xac ten Tp la '+s);
+	else
+	{
+		c=prompt('Goi y 2: Ky tu cuoi la '+s.charAt(s.length-1),'');
+		if(c==s.toLowerCase())
+			alert('Chinh xac ten Tp la '+s);
+		else
+		{
+			g=prompt('Goi y cuoi cung: Chieu dai la '+s.length,'');
+			if(g==s.toLowerCase())
+				alert('Chinh xac ten Tp la '+s);
+			else
+				alert('Thua roi, ten Tp la '+s);
+		}
+	}
+	if(confirm('Choi tiep?'))
+		trochoi();
+}
+</script>
+</pre>
+</body>
+</html>

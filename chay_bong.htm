@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body>
+<script type="text/javascript">
+var t,tx=0,ty=0;
+function chay()
+{
+	bong.style.visibility="visible";
+	if(bong.style.pixelTop>window.screen.height-200)ty=1;
+	if(bong.style.pixelTop<50)ty=0;
+	bong.style.pixelTop=(ty==0)?bong.style.pixelTop+2:bong.style.pixelTop-2;
+	if(bong.style.pixelLeft>window.screen.width-70)tx=1;
+	if(bong.style.pixelLeft<00)tx=0;
+	bong.style.pixelLeft=(tx==0)?bong.style.pixelLeft+2:bong.style.pixelLeft-2;
+	t=setTimeout("chay()",tocdo.value);
+}
+function nut()
+{
+	if(a.value=="Start")
+	{
+		a.value="Stop";
+		chay();
+	}
+	else if(a.value="Stop")
+	{
+		a.value="Start";
+		clearTimeout(t);
+	}
+}
+</script>
+Toc do: <input type=text name=tocdo>
+<input id=a type=button onclick=nut() value="Start"><br>
+<div id=bong style="position:absolute; visibility=hidden">
+<img src=icon.ico>
+</div>
+</body>
+</html>

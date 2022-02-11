@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>thuc hanh java</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+function chuoi()
+{
+var s=new String(msg.value),vt,kt=0,ks=0,c;
+alert("ky tu dau la: " + s.charAt(0)+"\n" + "ky tu cuoi la: " + s.charAt(s.length-1));
+vt=s.indexOf("@");
+if(vt>0)
+	tb="co @ o vi tri thu " + vt;
+else
+	tb="khong co @";
+alert(tb);
+}
+</script>
+<input type=text name=msg><input type=button value=ok onclick=chuoi()>
+</pre>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body onload=tinhkc()>
+<script type="text/javascript">
+var n,i,j,kc;
+stp=0,tentp=new Array(10),a=new Array(10);
+for(i=0;i<10;i++)a[i]=new Array(10);
+function sotp()
+{
+do n=prompt('So stp','');
+while(n>9 || n<2)
+return n;
+}   
+function nhapkc(stp)
+{
+	for(i=0;i<stp;i++)
+	{
+		ten=prompt("ten tp thu "+(i+1),'');
+		tentp[i]=ten;
+	}
+	for(i=0;i<stp;i++)
+		for(j=0;j<stp;j++)
+		{
+			if(i==j)a[i][j]=0;
+			else if(j<i)
+			{
+				a[i][j]=a[j][i];
+			}
+			else
+			{
+				kc=prompt('kc tu '+tentp[i]+" den "+tentp[j],'');
+				if(!isNaN(kc)) a[i][j]=kc;
+			}
+		}
+	xuattp(stp);
+}
+function xuattp(stp)
+{
+	document.write('Tu : <select name=tutp onchange=tinhkc()>');
+	for(i=0;i<stp;i++) document.write("<option value="+i+">"+tentp[i]+"</option>");
+	document.write("</select>");
+	document.write('Den : <select name=dentp onchange=tinhkc()>');
+	for(i=0;i<stp;i++) document.write("<option value="+i+">"+tentp[i]+"</option>");
+	document.write("</select><br>");
+	document.write("<input type=radio name=chon value=1 checked onclick=tinhkc()> Km");
+	document.write("<input type=radio name=chon value=2 onclick=tinhkc()> Miles<br>");
+	document.write("<input type=text name=kq size=50>");	
+}
+function tinhkc()
+{
+	i=tutp.value;
+	j=dentp.value;
+	if(chon[0].checked)	kq.value="Tu "+tentp[i]+" den "+ tentp[j]+" = " + a[i][j]+ " Km";
+	if(chon[1].checked)	kq.value="Tu "+tentp[i]+" den "+ tentp[j]+" = " +Math.round(eval(a[i][j])*1.613)+ " Miles";
+}
+function start()
+{
+	do n=prompt("Nhap so thanh pho","")
+	while(n<2 || n>9)
+	for(i=0;i<n;i++) tentp[i]=prompt('Nhap ten tp',"")
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+		{
+			if(i==j)a[i][j]=0;
+			else if(j<i)a[i][j]=a[j][i];
+			else	
+			{
+				kc=prompt('Khoang cach tu '+tentp[i]+' den '+tentp[j],"");
+				if(!isNaN(kc))
+				a[i][j]=kc;
+			}
+		}	
+	document.write("Tu : <select name=tutp onchange=tinhkc()>");
+	for(j=0;j<n;j++) document.write("<option value="+j+">"+tentp[j]+"</option>");
+	document.write("</select>");	
+	document.write("Den : <select name=dentp onchange=tinhkc()>");
+	for(j=0;j<n;j++) document.write("<option value="+j+">"+tentp[j]+"</option>");
+	document.write("</select><br>");	
+	document.write("<input type=radio name=chon value=1 checked onclick=tinhkc()> Km");
+	document.write("<input type=radio name=chon value=2 onclick=tinhkc()> Miles");
+	document.write("<br><input type=text name=kq>");	
+}
+nhapkc(sotp());
+</script>
+</body>
+</html>

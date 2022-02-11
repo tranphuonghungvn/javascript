@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>java</title>
+</head>
+<body onload=thoigian();thoigian2()>
+<script type="text/javascript">
+var t,c=10,g=1;
+var time,d=new Date(),ap;
+var h=d.getHours();
+var m=d.getMinutes();
+var s=d.getSeconds();
+function thoigian()
+{
+	document.getElementById('txt1').value=c;
+	if (c!=0)
+	{
+		c=c-1;
+		t=setTimeout("thoigian()",1000);
+	}
+	else
+		clearTimeout(t);
+}
+function thoigian2()
+{
+	if(s<60)
+		s++;
+	else
+	{
+		s=0;
+		m++;
+	}
+	if(m>=60)
+	{
+		h++;
+		m=0;
+	}
+	if(h<12)
+		ap="AM";
+	else
+	{
+		ap="PM";
+	}
+	if(h>24)
+		h=0;
+	time=h+":"+m+":"+s+":"+" "+ap;
+	txt2.value=time;
+	t=setTimeout("thoigian2()",1000);
+}
+</script>
+<input type="text" id="txt1"><br>
+<input type="text" name="txt2"><br>
+</body>
+</html>

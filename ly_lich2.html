@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>JAVA</title>
+</head>
+<body>
+<script type="text/javascript">
+var i
+to1=new Array("Hung","Thanh");
+to2=new Array("Tam","Tan");
+to3=new Array("Thu","Tien");
+function thanhvien()
+{
+	switch(eval(to.value))
+	{
+		case 1:
+			for(i=0;i<to1.length;i++)
+				ten.options[i+1]=new Option(to1[i],i+1,true,true);
+				ten.options[0]=new Option('',0,true,true);
+				msg.value='';
+			break;
+		case 2:
+			for(i=0;i<to2.length;i++)
+				ten.options[i+1]=new Option(to2[i],i+1,true,true);
+				ten.options[0]=new Option('',0,true,true);
+				msg.value='';
+			break;
+		case 3:
+			for(i=0;i<to3.length;i++)
+				ten.options[i+1]=new Option(to3[i],i+1,true,true);
+				ten.options[0]=new Option('',0,true,true);
+				msg.value='';
+			break;
+	}
+}
+function lylich()
+{
+	var t,n;
+	n=eval(to.value);
+	t=eval(ten.value);
+	if(n==1)
+	{
+		switch(t)
+		{
+			case 1:
+				msg.value="Ho va ten: Tran Phuong Hung\nSinh ngay: 11/01/1991\nTrinh do: 12/12";
+				break;
+			case 2:
+				msg.value="Ho va ten: Nguyen Thi Lan Thanh\nSinh ngay: 23/04/1991\nTrinh do: 12/12";
+				break;
+		}
+	}
+	if(n==2)
+	{
+		switch(t)
+		{
+			case 1:
+				msg.value="Ho va ten: Pham Linh Tam\nSinh ngay: 11/01/1991\nTrinh do: 12/12";
+				break;
+			case 2:
+				msg.value="Ho va ten: Tran Thanh Tan\nSinh ngay: 23/04/1991\nTrinh do: 12/12";
+				break;
+		}
+	}
+	if(n==3)
+	{
+		switch(t)
+		{
+			case 1:
+				msg.value="Ho va ten: Hoang Thanh Thu\nSinh ngay: 11/01/1991\nTrinh do: 12/12";
+				break;
+			case 2:
+				msg.value="Ho va ten: Nguyen Ngoc Tien\nSinh ngay: 23/04/1991\nTrinh do: 12/12";
+				break;
+		}
+	}
+}
+</script>
+To:<select name=to onchange=thanhvien()>
+<option value=0></option>
+<option value=1>To 1</option>
+<option value=2>To 2</option>
+<option value=3>To 3</option>
+</select>
+Thanh vien:<select name=ten onchange=lylich()></select>
+Ly lich:<textarea name=msg></textarea>
+</body>
+</html>
